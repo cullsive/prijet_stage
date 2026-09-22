@@ -28,7 +28,7 @@ margin: 0;
 .monde .header_place{
 display: flex;
 align-items: center;
-background:hsl(0, 0%, 94%);
+background:#e8e8e8;
 padding: 10px 30px;
 height: 12vh;
 justify-content: space-between;
