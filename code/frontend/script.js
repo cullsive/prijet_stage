@@ -1,4 +1,32 @@
 
+// -------------------------------------------ajax page plus------------------------------------------------------
+
+
+
+
+// const openAjax = document.getElementById("openAjax"); // button
+// const closeAjax = document.getElementById("closeAjax"); // button
+// const ajaxPage = document.getElementById("ajaxPage");
+// const ajaxContent = document.getElementById("ajaxContent");
+
+// openAjax.addEventListener("click", () => {
+//     ajaxPage.classList.remove("hidden");
+
+//     // 🔥 Charge un fichier HTML ou texte
+//     fetch("ajax_data.html")
+//         .then(res => res.text())
+//         .then(data => {
+//             ajaxContent.innerHTML = data;
+//         });
+// });
+
+// closeAjax.addEventListener("click", () => {
+//     ajaxPage.classList.add("hidden");
+// });
+
+
+// -------------------------------------------ajax page plus------------------------------------------------------
+
 const items = [];
 
 for (let i = 1; i <= 30; i++) {
@@ -71,11 +99,11 @@ btn.addEventListener("click", () => {
 
 
     if (dejaClique) {
-        console.log("Déjà cliqué, change la date ou l'heure pour relancer.");
+        alert("vous avez deja clicke 😜😜😜"); 
         return;
     }
 
-    // 🔒 On active le verrou
+   
     dejaClique = true;
 
 
@@ -97,13 +125,17 @@ btn.addEventListener("click", () => {
     const nombreEntreprises = Math.floor(Math.random() * 8) + 3;
 
     
-    const start = Math.floor(Math.random() * 30) + 1;
+    // const start = Math.floor(Math.random() * 30) + 1;
+    
+    let min = 1; 
+    let max = 30; 
 
+    let totalDom = Math.floor(Math.random() * (max - min)) + min; 
     
     liste.innerHTML = "";//
 
     
-    for (let i = start; i < start + nombreEntreprises; i++) {
+    for (let i = totalDom; i < totalDom + nombreEntreprises; i++) {
 
         const card = document.createElement("div");
         card.className = "card";

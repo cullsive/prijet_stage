@@ -17,6 +17,81 @@ body{
 margin: 0;
 }
 
+
+/* ------------------------------------------------------------ajax page -------------------------------------------------- */
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#ajaxPage {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity .3s ease;
+    z-index: 9999;
+}
+
+.ajax-inner {
+    width: 100%;
+    height: 100%;
+   /* background: #e0e0e0; */
+    position: absolute;
+    
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#openAjax{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50% , -50%);
+width: 150px;
+height: 45px;
+border: none;
+background-color: black;
+color: white;
+cursor: pointer;
+animation: lara 3s infinite;
+}
+
+@keyframes lara{
+  0%{
+    background: #ffffff;
+    color: white;
+  }
+  50%{
+    background-color: black;
+color: white;
+  }
+  100%{
+    
+    background: rgb(255, 255, 255);
+  }
+}
+
+
+#closeAjax{
+  width:100px;
+  height: 35px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+/* ------------------------------------------------------------ajax page -------------------------------------------------- */
+
+
+
 .monde{
     width: 100%;
     height: 100%;
@@ -28,7 +103,7 @@ margin: 0;
 .monde .header_place{
 display: flex;
 align-items: center;
-background:#e8e8e8;
+background:#ffffff;
 padding: 10px 30px;
 height: 12vh;
 justify-content: space-between;
@@ -42,7 +117,7 @@ justify-content: space-between;
 }
 
 .dash{
-    background: #ebeaea;
+    background: #cccccc;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -63,7 +138,9 @@ justify-content: space-between;
 }
 
 .bad1, .bad2{
-    background: #e6e6e6;
+    background: #e0e0e0;
+    border: 1px solid white;
+
     display: flex;
     justify-content: space-between;
     padding: 5px 30px;
@@ -89,17 +166,15 @@ gap: 10px;
 
 
 .liste_de_rechercher, .liste_de_entreprise{
-background: rgb(224, 225, 227);
+background: #e0e0e0;
 overflow: auto;
 width: 100%;
 height: 100%;
 padding: 10px;
     overflow-y: auto;
     scrollbar-width: none;
-    box-shadow: 5px 5px 15px rgb(78, 78, 78), 
-    -5px -5px 15px rgb(78, 78, 78);
-
-    border-radius: 10px 10px 0px 0px ;
+    box-shadow: 5px 5px 15px #ffffff, 
+    -5px -5px 15px #ebebeb;
 }
 
 
@@ -122,7 +197,7 @@ select{
     width: 150px;
     height: 4vh;
     font-size: 15px;
-    border: 2px dashed rgb(176, 215, 6);
+    border: 2px dashed rgb(203, 203, 201);
     border-radius: 4px;
     outline: none;
     
@@ -138,17 +213,23 @@ cursor: pointer;
   transition: 0.2s ease-in-out;
 
 }
+.header_place button:active {
+  box-shadow: 1px 1px black;
+  border: 3px solid black;
+}
+.header_place button:hover {
+  box-shadow: 1px 1px black;
+}
 
 .affiche_profil{
-    background: red;
+    background: #e0e0e0;
     width: 35%;
     height: 60%;
     margin:auto;
     border-radius: 8px;
+    border: 1px solid white;
+    box-shadow: 10px 10px 20px #ebebeb;
 }
-
-
-
 
 
 
@@ -165,22 +246,23 @@ cursor: pointer;
 }
 
 .card {
-    background: #1e1e1e;
+    background: #ffffff;
     padding: 15px;
     border-radius: 10px;
     text-align: center;
-    color: white;
+    color: rgb(6, 6, 6);
     transition: 0.3s;
     cursor: pointer;
 }
 
 .card:hover {
     transform: scale(1.05);
-    background: #333;
+    background: #bbbaba;
+    border: 2px dashed rgb(13, 12, 12);
 }
 
 .card img {
-    width: 100%;
+    width: 50%;
     border-radius: 8px;
 }
 
@@ -203,7 +285,7 @@ cursor: pointer;
      background: rgb(129, 129, 129);
     }
     50%{
-        background: rgb(0, 255, 34);
+        background: rgb(6, 161, 27);
     }
     100%{
      background: rgb(114, 113, 113);
@@ -313,3 +395,50 @@ cursor: pointer;
   transform: rotate(330deg) translate(0, -130%);
   animation-delay: -0.1s;
 }
+
+
+
+       
+        
+        .affiche_profil{
+          align-content: center;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+        }
+     
+       .ma{
+        height: 20vh;
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+       }
+       .ma svg{
+        background: rgb(255, 255, 255);
+        width: 35px;
+        height: 35px;
+        padding: 5px;
+        border-radius: 50%;
+        box-shadow: 5px 5px 5px rgb(177, 176, 176);
+       }
+        .ma-courbe {
+            stroke: #000000;      
+            stroke-width: 5;      
+            fill: none;            
+            stroke-linecap: round; 
+        }
+
+
+
+        /* ----------------------------------------------------------media @ --------------------------------------------------------------------------- */
+
+/* min or max  */
+
+/* tel code */
+        /* @media(){
+
+        } */
+
+
+        /* total = 1195 */
