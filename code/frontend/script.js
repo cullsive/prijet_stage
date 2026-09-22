@@ -48,9 +48,39 @@ const liste = document.querySelector(".liste_de_entreprise_re");
 const point = document.getElementById("point"); 
 const loader = document.querySelector(".loader"); 
 
+
+
+
+let dejaClique = false;
+
+
+selectDate.addEventListener("change", () => {
+    dejaClique = false;
+});
+
+
+selectHeure.addEventListener("change", () => {
+    dejaClique = false;
+});
+
+
+
+
 btn.addEventListener("click", () => {
 
-    // Animation loader
+
+
+    if (dejaClique) {
+        console.log("Déjà cliqué, change la date ou l'heure pour relancer.");
+        return;
+    }
+
+    // 🔒 On active le verrou
+    dejaClique = true;
+
+
+     liste.innerHTML = "";
+    
     loader.style.visibility = "visible";
 
     setTimeout(() => {
