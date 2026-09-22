@@ -77,8 +77,6 @@ const point = document.getElementById("point");
 const loader = document.querySelector(".loader"); 
 
 
-
-
 let dejaClique = false;
 
 
@@ -95,8 +93,6 @@ selectHeure.addEventListener("change", () => {
 
 
 btn.addEventListener("click", () => {
-
-
 
     if (dejaClique) {
         alert("vous avez deja clicke 😜😜😜"); 
