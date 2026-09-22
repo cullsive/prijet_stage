@@ -212,12 +212,13 @@ select{
 
 .loader {
     visibility: hidden;
-    position: relative;
+    position: absolute;
   width: 54px;
   height: 54px;
   border-radius: 10px;
-  margin: auto;
+  /* margin: auto; */
   top: 35%;
+  right: 13.5%;
   background: rgb(255, 255, 255);
 
 }
