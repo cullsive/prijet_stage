@@ -234,7 +234,9 @@ cursor: pointer;
     box-shadow: 10px 10px 20px #ebebeb;
 }
 
-
+#btnt2{
+display: none;
+}
 
 
 .liste_de_entreprise_ty {
@@ -437,3 +439,56 @@ cursor: pointer;
 
 
         /* //finish */
+
+
+
+
+ .chart {
+    width: 100%;
+    margin: 10px auto;
+
+}
+
+.chart-svg {
+    width: 100%;
+    height: auto;
+}
+
+.axis {
+    stroke: #555;
+    stroke-width: 1.5;
+}
+
+
+.fill {
+    opacity: 0;
+    animation: fadeFill 2s ease forwards;
+}
+
+.fill-green { fill: url(#fillGreen); animation-delay: 0.3s; }
+.fill-blue  { fill: url(#fillBlue);  animation-delay: 0.5s; }
+.fill-yellow{ fill: url(#fillYellow);animation-delay: 0.7s; }
+
+@keyframes fadeFill {
+    to { opacity: 1; }
+}
+
+.curve {
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    animation: draw 2.5s ease forwards infinite;
+
+    filter: drop-shadow(0 0 6px rgba(255,255,255,0.2));
+}
+
+.curve-green  { stroke: url(#gradGreen);  animation-delay: 0.3s; }
+.curve-blue   { stroke: url(#gradBlue);   animation-delay: 0.5s; }
+.curve-yellow { stroke: url(#gradYellow); animation-delay: 0.7s; }
+
+@keyframes draw {
+    to { stroke-dashoffset: 0; }
+}

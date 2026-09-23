@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seafrigo</title>
-
-
+    <title>Seafrigo Group</title>
+    <link rel="shortcut icon" href="./img/1631337073364.png" type="image/png">
+  
+   
 <link rel="stylesheet" href="./style.css" media="(min-width:1195px)">
 <link rel="stylesheet" href="./phone.css" media="(max-width:1194px)">
 
@@ -85,7 +86,7 @@
 
 <div class="bad1">
     <h3>profile</h3>
-       <button id="btnt2">btnt</button>
+       <button id="btnt2">voir</button>
         <button id="closeAjax" >Fermer</button>
 </div>
 
@@ -105,12 +106,118 @@
     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M482-160q-134 0-228-93t-94-227v-7l-64 64-56-56 160-160 160 160-56 56-64-64v7q0 100 70.5 170T482-240q26 0 51-6t49-18l60 60q-38 22-78 33t-82 11Zm278-161L600-481l56-56 64 64v-7q0-100-70.5-170T478-720q-26 0-51 6t-49 18l-60-60q38-22 78-33t82-11q134 0 228 93t94 227v7l64-64 56 56-160 160Z"/></svg>
 </div>
 
-<div class="cb">
+<!-- <div class="cb">
         <svg width="500" height="200" viewBox="0 0 500 200">
         
         <path class="ma-courbe" d="M 50 150 C 150 20, 350 280, 450 50" />
     </svg>
+</div> -->
+
+
+
+
+
+<div class="chart">
+    <svg viewBox="0 0 400 200" class="chart-svg">
+
+        <!-- Axes -->
+        <line x1="20" y1="180" x2="380" y2="180" class="axis" />
+        <line x1="40" y1="20" x2="40" y2="180" class="axis" />
+
+        <!-- Dégradés animés -->
+        <defs>
+            <!-- Vert Binance -->
+            <linearGradient id="gradGreen">
+                <stop offset="0%" stop-color="#4ade80">
+                    <animate attributeName="stop-color" values="#4ade80; #22c55e; #4ade80" dur="4s" repeatCount="indefinite"/>
+                </stop>
+                <stop offset="100%" stop-color="#22c55e">
+                    <animate attributeName="stop-color" values="#22c55e; #4ade80; #22c55e" dur="4s" repeatCount="indefinite"/>
+                </stop>
+            </linearGradient>
+
+            <!-- Bleu TradingView -->
+            <linearGradient id="gradBlue">
+                <stop offset="0%" stop-color="#3b82f6">
+                    <animate attributeName="stop-color" values="#3b82f6; #2563eb; #3b82f6" dur="4s" repeatCount="indefinite"/>
+                </stop>
+                <stop offset="100%" stop-color="#2563eb">
+                    <animate attributeName="stop-color" values="#2563eb; #3b82f6; #2563eb" dur="4s" repeatCount="indefinite"/>
+                </stop>
+            </linearGradient>
+
+            <!-- Jaune Binance -->
+            <linearGradient id="gradYellow">
+                <stop offset="0%" stop-color="#facc15">
+                    <animate attributeName="stop-color" values="#facc15; #eab308; #facc15" dur="4s" repeatCount="indefinite"/>
+                </stop>
+                <stop offset="100%" stop-color="#eab308">
+                    <animate attributeName="stop-color" values="#eab308; #facc15; #eab308" dur="4s" repeatCount="indefinite"/>
+                </stop>
+            </linearGradient>
+
+            <!-- Remplissage -->
+            <linearGradient id="fillGreen" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="rgba(74,222,128,0.4)" />
+                <stop offset="100%" stop-color="rgba(74,222,128,0)" />
+            </linearGradient>
+
+            <linearGradient id="fillBlue" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="rgba(59,130,246,0.4)" />
+                <stop offset="100%" stop-color="rgba(59,130,246,0)" />
+            </linearGradient>
+
+            <linearGradient id="fillYellow" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="rgba(250,204,21,0.4)" />
+                <stop offset="100%" stop-color="rgba(250,204,21,0)" />
+            </linearGradient>
+        </defs>
+
+        <!-- Remplissage courbe verte -->
+        <path d="M40 150 
+                 C100 80, 160 120, 220 60 
+                 S320 40, 380 90 L380 180 L40 180 Z"
+              class="fill fill-green" />
+
+        <!-- Courbe verte -->
+        <path d="M40 150 
+                 C100 80, 160 120, 220 60 
+                 S320 40, 380 90"
+              class="curve curve-green" />
+
+        <!-- Remplissage courbe bleue -->
+        <path d="M40 170 
+                 C100 140, 160 160, 220 120 
+                 S320 110, 380 130 L380 180 L40 180 Z"
+              class="fill fill-blue" />
+
+        <!-- Courbe bleue -->
+        <path d="M40 170 
+                 C100 140, 160 160, 220 120 
+                 S320 110, 380 130"
+              class="curve curve-blue" />
+
+        <!-- Remplissage courbe jaune -->
+        <path d="M40 130 
+                 C100 110, 160 90, 220 100 
+                 S320 120, 380 110 L380 180 L40 180 Z"
+              class="fill fill-yellow" />
+
+        <!-- Courbe jaune -->
+        <path d="M40 130 
+                 C100 110, 160 90, 220 100 
+                 S320 120, 380 110"
+              class="curve curve-yellow" />
+
+    </svg>
 </div>
+
+
+
+
+
+
+
 </div>
 
 
@@ -118,7 +225,7 @@
 
 <div class="bad2">
     <div class="bad_H" translate="no">live <div id="point"></div></div>
-    <button id="btnt">btnt</button>
+    <button id="btnt">voir</button>
     <h3>resultat</h3>
 </div>
 
