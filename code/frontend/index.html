@@ -14,6 +14,7 @@
 <script src="./jax.js" defer></script>
 <script src="./phone.js" defer></script>
 
+
 </head>
 <body>
   <button id="openAjax">entre</button>  
@@ -125,15 +126,37 @@
 
 
 <div class="chart">
-    <svg viewBox="0 0 400 200" class="chart-svg">
+    <svg viewBox="0 0 450 260" class="chart-svg">
 
-        <!-- Axes -->
-        <line x1="20" y1="180" x2="380" y2="180" class="axis" />
-        <line x1="40" y1="20" x2="40" y2="180" class="axis" />
+        <!-- Grille horizontale -->
+        <g class="grid">
+            <line x1="40" y1="40"  x2="430" y2="40"  />
+            <line x1="40" y1="80"  x2="430" y2="80"  />
+            <line x1="40" y1="120" x2="430" y2="120" />
+            <line x1="40" y1="160" x2="430" y2="160" />
+            <line x1="40" y1="200" x2="430" y2="200" />
+        </g>
+
+        <!-- Labels Y -->
+        <g class="labels-y">
+            <text x="10" y="45">120</text>
+            <text x="10" y="85">100</text>
+            <text x="10" y="125">80</text>
+            <text x="10" y="165">60</text>
+            <text x="10" y="205">40</text>
+        </g>
+
+        <!-- Labels X -->
+        <g class="labels-x">
+            <text x="70"  y="230">Jan</text>
+            <text x="150" y="230">Feb</text>
+            <text x="230" y="230">Mar</text>
+            <text x="310" y="230">Apr</text>
+            <text x="390" y="230">May</text>
+        </g>
 
         <!-- Dégradés animés -->
         <defs>
-            <!-- Vert Binance -->
             <linearGradient id="gradGreen">
                 <stop offset="0%" stop-color="#4ade80">
                     <animate attributeName="stop-color" values="#4ade80; #22c55e; #4ade80" dur="4s" repeatCount="indefinite"/>
@@ -143,7 +166,6 @@
                 </stop>
             </linearGradient>
 
-            <!-- Bleu TradingView -->
             <linearGradient id="gradBlue">
                 <stop offset="0%" stop-color="#3b82f6">
                     <animate attributeName="stop-color" values="#3b82f6; #2563eb; #3b82f6" dur="4s" repeatCount="indefinite"/>
@@ -153,7 +175,6 @@
                 </stop>
             </linearGradient>
 
-            <!-- Jaune Binance -->
             <linearGradient id="gradYellow">
                 <stop offset="0%" stop-color="#facc15">
                     <animate attributeName="stop-color" values="#facc15; #eab308; #facc15" dur="4s" repeatCount="indefinite"/>
@@ -163,7 +184,7 @@
                 </stop>
             </linearGradient>
 
-            <!-- Remplissage -->
+            <!-- Remplissages -->
             <linearGradient id="fillGreen" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stop-color="rgba(74,222,128,0.4)" />
                 <stop offset="100%" stop-color="rgba(74,222,128,0)" />
@@ -180,44 +201,29 @@
             </linearGradient>
         </defs>
 
-        <!-- Remplissage courbe verte -->
-        <path d="M40 150 
-                 C100 80, 160 120, 220 60 
-                 S320 40, 380 90 L380 180 L40 180 Z"
+        <!-- Remplissages -->
+        <path d="M40 160 C120 120, 200 140, 280 90 S380 70, 430 110 L430 200 L40 200 Z"
               class="fill fill-green" />
 
-        <!-- Courbe verte -->
-        <path d="M40 150 
-                 C100 80, 160 120, 220 60 
-                 S320 40, 380 90"
-              class="curve curve-green" />
-
-        <!-- Remplissage courbe bleue -->
-        <path d="M40 170 
-                 C100 140, 160 160, 220 120 
-                 S320 110, 380 130 L380 180 L40 180 Z"
+        <path d="M40 180 C120 150, 200 170, 280 130 S380 120, 430 140 L430 200 L40 200 Z"
               class="fill fill-blue" />
 
-        <!-- Courbe bleue -->
-        <path d="M40 170 
-                 C100 140, 160 160, 220 120 
-                 S320 110, 380 130"
-              class="curve curve-blue" />
-
-        <!-- Remplissage courbe jaune -->
-        <path d="M40 130 
-                 C100 110, 160 90, 220 100 
-                 S320 120, 380 110 L380 180 L40 180 Z"
+        <path d="M40 140 C120 130, 200 110, 280 120 S380 140, 430 130 L430 200 L40 200 Z"
               class="fill fill-yellow" />
 
-        <!-- Courbe jaune -->
-        <path d="M40 130 
-                 C100 110, 160 90, 220 100 
-                 S320 120, 380 110"
+        <!-- Courbes -->
+        <path d="M40 160 C120 120, 200 140, 280 90 S380 70, 430 110"
+              class="curve curve-green" />
+
+        <path d="M40 180 C120 150, 200 170, 280 130 S380 120, 430 140"
+              class="curve curve-blue" />
+
+        <path d="M40 140 C120 130, 200 110, 280 120 S380 140, 430 130"
               class="curve curve-yellow" />
 
     </svg>
 </div>
+
 
 
 

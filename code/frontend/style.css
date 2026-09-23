@@ -156,7 +156,7 @@ align-items: center;
 display: flex;
 height: 5vh;
 gap: 10px;
-
+text-shadow: none;
 }
 .bad_H div{
     width: 10px;
@@ -203,6 +203,7 @@ select{
     border: 2px dashed rgb(203, 203, 201);
     border-radius: 4px;
     outline: none;
+    text-align: center;
     
 }
 
@@ -451,55 +452,6 @@ margin-top: 15px;
 
 
 
- .chart {
-    width: 100%;
-    margin: 10px auto;
-
-}
-
-.chart-svg {
-    width: 100%;
-    height: auto;
-}
-
-.axis {
-    stroke: #555;
-    stroke-width: 1.5;
-}
-
-
-.fill {
-    opacity: 0;
-    animation: fadeFill 2s ease forwards;
-}
-
-.fill-green { fill: url(#fillGreen); animation-delay: 0.3s; }
-.fill-blue  { fill: url(#fillBlue);  animation-delay: 0.5s; }
-.fill-yellow{ fill: url(#fillYellow);animation-delay: 0.7s; }
-
-@keyframes fadeFill {
-    to { opacity: 1; }
-}
-
-.curve {
-    fill: none;
-    stroke-width: 3;
-    stroke-linecap: round;
-
-    stroke-dasharray: 600;
-    stroke-dashoffset: 600;
-    animation: draw 2.5s ease forwards infinite;
-
-    filter: drop-shadow(0 0 6px rgba(255,255,255,0.2));
-}
-
-.curve-green  { stroke: url(#gradGreen);  animation-delay: 0.3s; }
-.curve-blue   { stroke: url(#gradBlue);   animation-delay: 0.5s; }
-.curve-yellow { stroke: url(#gradYellow); animation-delay: 0.7s; }
-
-@keyframes draw {
-    to { stroke-dashoffset: 0; }
-}
 
 
 #aner{
@@ -526,4 +478,111 @@ margin-top: 15px;
 
 .logo{
   cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.chart {
+    width: 100%;
+}
+
+/* SVG responsive */
+.chart-svg {
+    width: 100%;
+    height: auto;
+}
+
+/* Grille */
+.grid line {
+    stroke: #3a3f45; /* plus clair */
+    stroke-width: 1;
+    opacity: 0;
+    animation: gridFade 1.2s ease forwards;
+}
+
+@keyframes gridFade {
+    to { opacity: 1; }
+}
+
+/* Labels Y */
+.labels-y text {
+    fill: #b0b3b8; /* gris clair premium */
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    opacity: 0;
+    animation: labelFade 1.2s ease forwards;
+}
+
+/* Labels X */
+.labels-x text {
+    fill: #b0b3b8;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    opacity: 0;
+    animation: labelFade 1.2s ease forwards;
+    animation-delay: .3s;
+}
+
+@keyframes labelFade {
+    to { opacity: 1; }
+}
+
+/* Remplissages */
+.fill-green  { fill: url(#fillGreen); }
+.fill-blue   { fill: url(#fillBlue); }
+.fill-yellow { fill: url(#fillYellow); }
+
+.fill {
+    opacity: 0;
+    animation: fadeFill 1.5s ease forwards infinite;
+}
+
+@keyframes fadeFill {
+    to { opacity: 0.85; }
+}
+
+/* Courbes */
+.curve {
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    animation: draw 2.5s ease forwards infinite, pulse 4s ease-in-out infinite;
+
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.25));
+}
+
+/* Couleurs des courbes */
+.curve-green  { stroke: url(#gradGreen); }
+.curve-blue   { stroke: url(#gradBlue); }
+.curve-yellow { stroke: url(#gradYellow); }
+
+/* Animation de dessin */
+@keyframes draw {
+    to { stroke-dashoffset: 0; }
+}
+
+/* Pulsation légère (effet vivant) */
+@keyframes pulse {
+    0% { filter: drop-shadow(0 0 4px rgba(255,255,255,0.15)); }
+    50% { filter: drop-shadow(0 0 12px rgba(255,255,255,0.35)); }
+    100% { filter: drop-shadow(0 0 4px rgba(255,255,255,0.15)); }
 }
