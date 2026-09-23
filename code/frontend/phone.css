@@ -384,6 +384,7 @@ height: 20vh;
         display: flex;
         justify-content: space-between; 
        }
+
        .ma svg{
        background: rgb(255, 255, 255);
         width: 35px;

@@ -6,7 +6,6 @@ const ajaxContent = document.getElementById("ajaxContent");
 openAjax.addEventListener("click", () => {
     ajaxPage.classList.remove("hidden");
 
-    // 🔥 Charge un fichier HTML ou texte
     fetch("ajax_data.html")
         .then(res => res.text())
         .then(data => {
